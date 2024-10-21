@@ -32,11 +32,12 @@ studentScore is >=72 && <=85: "Great job! [Student Name] has a B."
 studentScore is >=60 && <=71: "Good effort! [Student Name] has a C."
 studentScore is >=50 && <=59: "Needs improvement. [Student Name] has a D."
 studentScore is >50: "Fail. [Student Name] has a F."
+----------------------------------- PLANNING ----------------------------------- */
 
+/* ----------------------------------- CHALLENGE -----------------------------------
 studentScore within 2 points of the next grade: Almost there! [Student Name] is close to a [next grade].
 studentScore within 2 points of the previous grade: Work Hard! [Student Name] is almost falling to [previous grade].
-
------------------------------------ PLANNING ----------------------------------- */
+----------------------------------- CHALLENGE ----------------------------------- */
 
 
 //determine a proper function name and parameter variable name
@@ -64,7 +65,7 @@ if (studentScore >= 86){
 readline.question("What is your name? ", (_studentName) => {
       
       //make an infinite recall
-      function StartGame() {
+      function StartApp() {
     
         //determine the sudent score
         readline.question("What is your score? ", (_studentScore) => {
@@ -75,11 +76,11 @@ readline.question("What is your name? ", (_studentName) => {
           if (_studentScore === "quit") {
             readline.close();
           } else {
-                StartGame();
+                StartApp();
               
           }
         });
       }
     
-      StartGame();
+      StartApp();
     });
